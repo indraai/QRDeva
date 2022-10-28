@@ -1,4 +1,6 @@
 // Copyright (c)2021 Quinn Michaels
+// QR Deva
+
 const fs = require('fs');
 const path = require('path');
 
@@ -29,6 +31,11 @@ const QR = new Deva({
   },
   deva: {},
   func: {
+    /**************
+    func: todataurl
+    params: opts
+    describe: Generate a QR Code data url.
+    ***************/
     todataurl(opts) {
       return new Promise((resolve, reject) => {
         this.modules.qrcode.toDataURL(opts.q.text,this.vars.qr).then(qr => {
@@ -46,15 +53,38 @@ const QR = new Deva({
     }
   },
   methods: {
+    /**************
+    method: get
+    params: packet
+    describe: Call teh todataurl function and return a qr code.
+    ***************/
     get(packet) {
       return this.func.todataurl(packet);
     },
+
+    /**************
+    method: uid
+    params: packet
+    describe: Generate a system unique id.
+    ***************/
     uid(packet) {
       return Promise.resolve(this.uid());
     },
+
+    /**************
+    method: status
+    params: packet
+    describe: Return the current status for the deva.
+    ***************/
     status(packet) {
       return this.status();
     },
+
+    /**************
+    method: help
+    params: packet
+    describe: Help system for the QR Deva.
+    ***************/
     help(packet) {
       return new Promise((resolve, reject) => {
         this.lib.help(packet.q.text, __dirname).then(help => {
@@ -68,9 +98,6 @@ const QR = new Deva({
         }).catch(reject);
       });
     }
-  },
-  onError(err) {
-    console.error(err);
   }
 });
 module.exports = QR

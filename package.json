@@ -1,5 +1,5 @@
 {
-  "name": "@feecting/qrdeva",
+  "name": "@indra.ai/qrdeva",
   "version": "0.0.1",
   "description": "The QR Code Deva",
   "main": "index.js",
@@ -17,6 +17,9 @@
   ],
   "author": "Quinn Michaels",
   "license": "MIT",
+  "dependencies": {
+    "@indra.ai/deva": "^1.0.25"
+  },
   "bugs": {
     "url": "https://github.com/indraai/QRDeva/issues"
   },

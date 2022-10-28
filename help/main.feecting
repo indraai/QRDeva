@@ -1,3 +1,17 @@
-## qr
+## QR Deva
 
-p:This is the main help file for QR Code Deva. The Deva for making QR Codes. undefined
+p:This is the main help file for QR Code Deva. The Deva for making QR Codes.
+
+### Methods
+
+cmd:#qr get testing qr code from help
+p:This command will generate a QR code for you with the string value.
+
+cmd:#qr uid
+p:Generate a unique id from the QR Code Deva.
+
+cmd:#qr status
+p:Return the status for the QR Deva.
+
+cmd:#qr help
+p:Get help using the QR Deva
