@@ -2,12 +2,10 @@
   "name": "QR Code Deva Data File",
   "describe": "The main Data file for QR Code Deva",
   "copyright": "Copyright (c)2021 Quinn Michaels. All rights reserved.",
-  "data": {
+  "DATA": {
     "agent": {
-      "uid": "4564518252132",
+      "id": 4564518252132,
       "key": "qr",
-      "name": "QR Code Deva",
-      "describe": "The Deva for making QR Codes.",
       "prompt": {
         "emoji": "⊙",
         "text": "qr",
@@ -29,11 +27,13 @@
         "speed": 1
       },
       "profile": {
+        "name": "QR Code Deva",
+        "describe": "The Deva for making QR Codes.",
         "emoji": "/public/devas/qr/emoji.png",
         "avatar": "/public/devas/qr/avatar.png",
         "background": "",
-        "describe": "The Deva for making QR Codes.",
-        "gender": "M"
+        "gender": "M",
+        "voice": "onyx"
       }
     },
     "vars": {
@@ -50,6 +50,14 @@
         "width": 150,
         "margin": 1,
         "scale": 2
+      },
+      "context": {
+        "uid": "generating uid",
+        "status": "getting status",
+        "info": "getting info",
+        "feature": "accessing feature",
+        "issue": "has issues",
+        "help": "asking for help"
       }
     }
   }

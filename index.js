@@ -1,30 +1,32 @@
 // Copyright (c)2021 Quinn Michaels
 // QR Deva
+const {agent,vars} = require('./data.json').DATA;
 
-const fs = require('fs');
-const path = require('path');
-
-const data_path = path.join(__dirname, 'data.json');
-const {agent,vars} = require(data_path).data;
+const package = require('./package.json');
+const info = {
+  id: package.id,
+  name: package.name,
+  version: package.version,
+  author: package.author,
+  describe: package.description,
+  dir: __dirname,
+  url: package.homepage,
+  git: package.repository.url,
+  bugs: package.bugs.url,
+  license: package.license,
+  copyright: package.copyright
+};
 
 const Deva = require('@indra.ai/deva');
 const QR = new Deva({
-  agent: {
-    uid: agent.uid,
-    key: agent.key,
-    name: agent.name,
-    describe: agent.describe,
-    prompt: agent.prompt,
-    voice: agent.voice,
-    profile: agent.profile,
-    translate(input) {
-      return input.trim();
-    },
-    parse(input) {
-      return input.trim();
-    }
-  },
+  info,
+  agent,
   vars,
+  utils: {
+    translate(input) {return input.trim();},
+    parse(input) {return input.trim();},
+    process(input) {return input.trim();},
+  },
   listeners: {},
   modules: {
     qrcode: require('qrcode'),
@@ -61,43 +63,6 @@ const QR = new Deva({
     get(packet) {
       return this.func.todataurl(packet);
     },
-
-    /**************
-    method: uid
-    params: packet
-    describe: Generate a system unique id.
-    ***************/
-    uid(packet) {
-      return Promise.resolve(this.uid());
-    },
-
-    /**************
-    method: status
-    params: packet
-    describe: Return the current status for the deva.
-    ***************/
-    status(packet) {
-      return this.status();
-    },
-
-    /**************
-    method: help
-    params: packet
-    describe: Help system for the QR Deva.
-    ***************/
-    help(packet) {
-      return new Promise((resolve, reject) => {
-        this.lib.help(packet.q.text, __dirname).then(help => {
-          return this.question(`#feecting parse ${help}`);
-        }).then(parsed => {
-          return resolve({
-            text: parsed.a.text,
-            html: parsed.a.html,
-            data: parsed.a.data,
-          });
-        }).catch(reject);
-      });
-    }
   }
 });
 module.exports = QR
