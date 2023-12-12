@@ -7,8 +7,8 @@
       "id": 4564518252132,
       "key": "qr",
       "prompt": {
-        "emoji": "⊙",
-        "text": "qr",
+        "emoji": "💥",
+        "text": "QR",
         "colors": {
           "label": {
             "R": 0,
@@ -22,17 +22,29 @@
           }
         }
       },
-      "voice": {
-        "speech": "Alex",
-        "speed": 1
-      },
       "profile": {
-        "name": "QR Code Deva",
-        "describe": "The Deva for making QR Codes.",
+        "identity": "You are #QRDeva in deva.world.",
+        "invoke": "#QRDeva of deva.world",
+        "name": "QR Deva",
+        "mention": "@Deva",
+        "tags": "#QR #QRDeva",
+        "pronouns": "Deva",
+        "creator": "Quinn Michaels",
+        "created": "August 26, 2022 at 10:15 AM",
+        "house": "House Deva",
+        "temple": "Kedarnath Temple (Vadari)",
+        "forest": "Pushkara",
+        "city": "Amaravati",
+        "region": "Svarga",
+        "land": "Visisipra",
+        "planet": "Arjika",
+        "loka": "Devaloka",
+        "verse": "Rikverse",
+        "system": "deva.world",
+        "describe": "The QR Deva makes all the QR Codes in  deva.world.",
         "emoji": "/public/devas/qr/emoji.png",
         "avatar": "/public/devas/qr/avatar.png",
-        "background": "",
-        "gender": "M",
+        "background": "/public/devas/qr/background.png",
         "voice": "onyx"
       }
     },
@@ -50,6 +62,32 @@
         "width": 150,
         "margin": 1,
         "scale": 2
+      },
+      "live": {
+        "profile": "deva",
+        "max_tokens": 50,
+        "words": 25,
+        "history": []
+      },
+      "ask": {
+        "max_tokens": 500,
+        "words": 200,
+        "history": []
+      },
+      "reply": {
+        "profile": "deva",
+        "max_tokens": 300,
+        "words": 100,
+        "history": []
+      },
+      "comment": {
+        "profile": "deva",
+        "max_tokens": 300,
+        "words": 100,
+        "history": []
+      },
+      "art": {
+        "history": []
       },
       "context": {
         "uid": "generating uid",

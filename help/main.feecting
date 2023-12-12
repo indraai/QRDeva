@@ -1,17 +1,38 @@
-## QR Deva
+::begin:center
+image: /public/devas/::agent_key::/main.png
+::end:center
 
-p:This is the main help file for QR Code Deva. The Deva for making QR Codes.
+# ::agent_name::
 
-### Methods
+::profile::
 
-cmd:#qr get testing qr code from help
+talk:#docs view devas/main:global
+
+---
+
+::begin:deva-methods
+## ::agent_name:: Methods
+p: These methods here are built into ::agent_name:: to provide various features like generating a qr code, uid, status, and viewing the help files.
+
+### Get
 p:This command will generate a QR code for you with the string value.
+example: #::agent_key:: get [string]
+::end:deva-methods
 
-cmd:#qr uid
-p:Generate a unique id from the QR Code Deva.
+talk:#docs view devas/main:methods
 
-cmd:#qr status
-p:Return the status for the QR Deva.
+talk:#docs view devas/main:features
 
-cmd:#qr help
-p:Get help using the QR Deva
+---
+
+talk:#docs view devas/main:security
+
+---
+
+copyright: (c)2023 Quinn Michaels
+
+::begin:hidden
+#color = ::agent_color::
+#bgcolor = ::agent_bgcolor::
+#bg = ::agent_background::
+::end:hidden

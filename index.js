@@ -1,5 +1,6 @@
 // Copyright (c)2021 Quinn Michaels
 // QR Deva
+const Deva = require('@indra.ai/deva');
 const {agent,vars} = require('./data.json').DATA;
 
 const package = require('./package.json');
@@ -17,7 +18,6 @@ const info = {
   copyright: package.copyright
 };
 
-const Deva = require('@indra.ai/deva');
 const QR = new Deva({
   info,
   agent,
