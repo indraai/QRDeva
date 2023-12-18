@@ -2,7 +2,6 @@
 // QR Deva
 const Deva = require('@indra.ai/deva');
 const {agent,vars} = require('./data.json').DATA;
-
 const package = require('./package.json');
 const info = {
   id: package.id,
@@ -17,7 +16,6 @@ const info = {
   license: package.license,
   copyright: package.copyright
 };
-
 const QR = new Deva({
   info,
   agent,

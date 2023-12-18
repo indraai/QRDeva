@@ -6,22 +6,15 @@ image: /public/devas/::agent_key::/main.png
 
 ::profile::
 
-talk:#docs view devas/main:global
-
 ---
 
-::begin:deva-methods
 ## ::agent_name:: Methods
 p: These methods here are built into ::agent_name:: to provide various features like generating a qr code, uid, status, and viewing the help files.
-
+::begin:deva-methods
 ### Get
 p:This command will generate a QR code for you with the string value.
 example: #::agent_key:: get [string]
 ::end:deva-methods
-
-talk:#docs view devas/main:methods
-
-talk:#docs view devas/main:features
 
 ---
 

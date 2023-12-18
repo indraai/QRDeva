@@ -20,7 +20,7 @@
     "Deva"
   ],
   "dependencies": {
-    "@indra.ai/deva": "^1.2.21",
+    "@indra.ai/deva": "^1.2.22",
     "qrcode": "^1.5.3"
   },
   "bugs": {
